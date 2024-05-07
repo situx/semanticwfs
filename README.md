@@ -22,9 +22,15 @@ To deploy the SemanticWFS using [Docker](https://www.docker.com), you can follow
 
 * Clone the repository
 * Modify the triplestoreconf.json and wfsconf.json according to your needs
-* Build the application war file using [Maven](https://maven.apache.org)
-* Build the Docker image
-* Deploy the Docker image
+* Build the Docker image, e.g.
+```bash
+docker build . -t semanticwfs
+```
+* Deploy the Docker image, e.g.
+```bash
+docker run -p 8080:8080 semanticwfs
+```
+* Access SemanticWFS via browser at `BASE_URL/semanticwfs`
 
 A Gitlab CI workflow is included in this repository.
 
